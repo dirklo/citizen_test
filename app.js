@@ -21,7 +21,7 @@ app.use(express.static('public'));
 let questions = questionObjects
 
 
-app.get('/start', (req, res) => {
+app.get('/', (req, res) => {
     questions = questionObjects
     for (let question of questions) {
         question.answered = false
@@ -91,6 +91,7 @@ app.post('/answer', (req, res, next) => {
     res.send(text)
 })
 
-app.listen(3000, () => {
-    console.log(`LISTENING ON PORT 3000`);
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+    console.log(`LISTENING ON PORT ${port}`);
 })
