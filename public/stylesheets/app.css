@@ -1,0 +1,12 @@
+body {
+   background-color: lightskyblue;
+   display: flex;
+   justify-content: top;
+   margin: auto;
+   min-height: 100vh;
+   flex-wrap: wrap 
+}
+
+.card {
+    box-shadow: 5px 10px rgba(29, 34, 39, .5);
+}

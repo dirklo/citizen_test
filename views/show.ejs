@@ -1,0 +1,37 @@
+<% layout('layouts/boilerplate')%>
+<div class="container d-flex justify-content-center">
+  <div class="card align-items-center text-center" style="width: 18rem">
+    <div class="card-body">
+      <% let answers = currentQuestion.randomFour() %>
+      <h5 class="card-title">Unanswered questions: <%= unanswered.length%></h5>
+      <p class="card-text"><%= currentQuestion.question%></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <button id="buttonOne" class="btn btn-primary"><%= answers[0]%></button>
+      </li>
+      <li class="list-group-item">
+        <button id="buttonTwo" class="btn btn-primary"><%= answers[1]%></button>
+      </li>
+      <li class="list-group-item">
+        <button id="buttonThree" class="btn btn-primary">
+          <%= answers[2]%>
+        </button>
+      </li>
+      <li class="list-group-item">
+        <button id="buttonFour" class="btn btn-primary">
+          <%= answers[3]%>
+        </button>
+      </li>
+      <li id="nextLi" class="list-group-item d-none">
+        <form action="/next" method="GET">
+          <button id="nextButton" class="btn btn-outline-success">
+            Next Question
+          </button>
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script src="/javascripts/showpage.js"></script>
