@@ -74,7 +74,7 @@ async function get_answer(button, marker) {
 function makeRequest(button, marker) {
     return new Promise(function (resolve, reject) {
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:3000/answer", true);
+        xhr.open("POST", "/answer", true);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onload = function () {
         if (this.status >= 200 && this.status < 300) {

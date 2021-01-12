@@ -20,7 +20,6 @@ app.use(express.static('public'));
 
 let questions = questionObjects
 
-
 app.get('/', (req, res) => {
     questions = questionObjects
     for (let question of questions) {
